@@ -1,4 +1,4 @@
-FROM alpine:latest
+FROM openjdk:jre-alpine
 
 MAINTAINER Florent Clarret <florent.clarret@gmail.com>
 
@@ -6,7 +6,7 @@ ENV FOLDER="/bubbleupnp-server/"
 
 EXPOSE 58050/tcp 58051/tcp 1900/tcp
 
-RUN apk --update add openjdk8-jre ffmpeg && \
+RUN apk --update add ffmpeg && \
     mkdir $FOLDER && \
     wget -P $FOLDER http://www.bubblesoftapps.com/bubbleupnpserver/BubbleUPnPServer-distrib.zip && \
     unzip -d $FOLDER $FOLDER/BubbleUPnPServer-distrib.zip && \
