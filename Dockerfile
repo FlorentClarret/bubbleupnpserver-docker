@@ -15,4 +15,4 @@ RUN apk --update add ffmpeg && \
     rm $FOLDER/launch.bat && \
     rm $FOLDER/LICENCE.txt
 
-CMD ["/bubbleupnpserver/launch.sh"]
+CMD ["/bubbleupnp-server/launch.sh"]
